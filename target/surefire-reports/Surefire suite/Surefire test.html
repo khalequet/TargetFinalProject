@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Surefire test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>4/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Nov 20 22:50:23 EST 2022</td>
+<td>Started on:</td><td>Wed Nov 23 19:31:18 EST 2022</td>
 </tr>
-<tr><td>Total time:</td><td>25 seconds (25161 ms)</td>
+<tr><td>Total time:</td><td>116 seconds (116114 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,15 +75,16 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify user can search a product and add the product to the cart", "Optional[Create Account]"</td>
-<td><div><pre>org.openqa.selenium.JavascriptException: javascript error: Cannot read properties of undefined (reading &apos;click&apos;)
+<td title='TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "count and verify footer's service section links", "Optional[Link]"</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@id=&apos;footer&apos;]/div/div&quot;}
   (Session info: chrome=107.0.5304.110)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
 System info: host: &apos;Tonnies-MBP&apos;, ip: &apos;fe80:0:0:0:1822:80ec:98e6:21ca%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.5.1&apos;, java.version: &apos;19&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a2254db773ee7199ea8165cd635ff7d3, executeScript {script=arguments[0].click(), args=[]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.110, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: /var/folders/21/_1db5crd4ys...}, goog:chromeOptions: {debuggerAddress: localhost:62895}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:62895/devtoo..., se:cdpVersion: 107.0.5304.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: a2254db773ee7199ea8165cd635ff7d3
+Command: [08e6753bde12f5f80dcd3943549f9c35, findElement {using=xpath, value=//div[@id=&apos;footer&apos;]/div/div}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.110, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: /var/folders/21/_1db5crd4ys...}, goog:chromeOptions: {debuggerAddress: localhost:62954}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:62954/devtoo..., se:cdpVersion: 107.0.5304.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 08e6753bde12f5f80dcd3943549f9c35
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
@@ -91,19 +92,23 @@ Session ID: a2254db773ee7199ea8165cd635ff7d3
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:477)
-	at pageObject.searchaproduct_pageObj.clickonStarbucksGiftCards(searchaproduct_pageObj.java:70)
-	at stepDef.searchaproduct_stepDef.iClickOnStarbucksGiftCardFromTheExploreItemsPopup(searchaproduct_stepDef.java:28)
-	at ✽.i click on Starbucks gift card link(file:///Users/tonniekhaleque/Documents/Target/src/test/java/features/searchaproduct.feature:8)
-... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace421227025", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace421227025'><pre>org.openqa.selenium.JavascriptException: javascript error: Cannot read properties of undefined (reading &apos;click&apos;)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at pageObject.link_pageObj.verifyandcountlinks(link_pageObj.java:48)
+	at stepDef.link_stepDef.countAndVerifyServiceSectionLinksToEnsureItNavigatesYouToParticularPage(link_stepDef.java:15)
+	at ✽.count and verify service section links to ensure it navigates you to particular page(file:///Users/tonniekhaleque/Documents/Target/src/test/java/features/links.feature:6)
+... Removed 3 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2136875798", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2136875798'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@id=&apos;footer&apos;]/div/div&quot;}
   (Session info: chrome=107.0.5304.110)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
 System info: host: &apos;Tonnies-MBP&apos;, ip: &apos;fe80:0:0:0:1822:80ec:98e6:21ca%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.5.1&apos;, java.version: &apos;19&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a2254db773ee7199ea8165cd635ff7d3, executeScript {script=arguments[0].click(), args=[]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.110, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: /var/folders/21/_1db5crd4ys...}, goog:chromeOptions: {debuggerAddress: localhost:62895}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:62895/devtoo..., se:cdpVersion: 107.0.5304.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: a2254db773ee7199ea8165cd635ff7d3
+Command: [08e6753bde12f5f80dcd3943549f9c35, findElement {using=xpath, value=//div[@id=&apos;footer&apos;]/div/div}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.110, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: /var/folders/21/_1db5crd4ys...}, goog:chromeOptions: {debuggerAddress: localhost:62954}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:62954/devtoo..., se:cdpVersion: 107.0.5304.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 08e6753bde12f5f80dcd3943549f9c35
 	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
@@ -114,12 +119,102 @@ Session ID: a2254db773ee7199ea8165cd635ff7d3
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
-	at org.openqa.selenium.remote.RemoteWebDriver.executeScript(RemoteWebDriver.java:477)
-	at pageObject.searchaproduct_pageObj.clickonStarbucksGiftCards(searchaproduct_pageObj.java:70)
-	at stepDef.searchaproduct_stepDef.iClickOnStarbucksGiftCardFromTheExploreItemsPopup(searchaproduct_stepDef.java:28)
-	at ✽.i click on Starbucks gift card link(file:///Users/tonniekhaleque/Documents/Target/src/test/java/features/searchaproduct.feature:8)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:359)
+	at pageObject.link_pageObj.verifyandcountlinks(link_pageObj.java:48)
+	at stepDef.link_stepDef.countAndVerifyServiceSectionLinksToEnsureItNavigatesYouToParticularPage(link_stepDef.java:15)
+	at ✽.count and verify service section links to ensure it navigates you to particular page(file:///Users/tonniekhaleque/Documents/Target/src/test/java/features/links.feature:6)
 </pre></div></td>
-<td>24</td>
+<td>42</td>
+<td>TestRunner@12405818</td></tr>
+<tr>
+<td title='TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify user can search a product and add the product to the cart", "Optional[Search a Product]"</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=107.0.5304.110)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;Tonnies-MBP&apos;, ip: &apos;fe80:0:0:0:1822:80ec:98e6:21ca%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.5.1&apos;, java.version: &apos;19&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f440dc1143f59516243e6fc5b0bc34d9, clickElement {id=d5a8e9d1-930a-4ce6-9493-d30b00e07bb7}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.110, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: /var/folders/21/_1db5crd4ys...}, goog:chromeOptions: {debuggerAddress: localhost:63494}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:63494/devtoo..., se:cdpVersion: 107.0.5304.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on MAC (f440dc1143f59516243e6fc5b0bc34d9)] -&gt; xpath: //*[@id=&apos;addToCartButtonOrTextIdFor83223533&apos;]]
+Session ID: f440dc1143f59516243e6fc5b0bc34d9
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at jdk.proxy2/jdk.proxy2.$Proxy25.click(Unknown Source)
+	at pageObject.searchaproduct_pageObj.iclickonADDToCartAccenttablelamp(searchaproduct_pageObj.java:75)
+	at stepDef.searchaproduct_stepDef.iClickOnAddToCartButton(searchaproduct_stepDef.java:34)
+	at ✽.i click on Add to cart button(file:///Users/tonniekhaleque/Documents/Target/src/test/java/features/searchaproduct.feature:9)
+... Removed 5 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace859203995", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace859203995'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=107.0.5304.110)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;Tonnies-MBP&apos;, ip: &apos;fe80:0:0:0:1822:80ec:98e6:21ca%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;12.5.1&apos;, java.version: &apos;19&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f440dc1143f59516243e6fc5b0bc34d9, clickElement {id=d5a8e9d1-930a-4ce6-9493-d30b00e07bb7}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.110, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: /var/folders/21/_1db5crd4ys...}, goog:chromeOptions: {debuggerAddress: localhost:63494}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:63494/devtoo..., se:cdpVersion: 107.0.5304.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on MAC (f440dc1143f59516243e6fc5b0bc34d9)] -&gt; xpath: //*[@id=&apos;addToCartButtonOrTextIdFor83223533&apos;]]
+Session ID: f440dc1143f59516243e6fc5b0bc34d9
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at jdk.proxy2/jdk.proxy2.$Proxy25.click(Unknown Source)
+	at pageObject.searchaproduct_pageObj.iclickonADDToCartAccenttablelamp(searchaproduct_pageObj.java:75)
+	at stepDef.searchaproduct_stepDef.iClickOnAddToCartButton(searchaproduct_stepDef.java:34)
+	at ✽.i click on Add to cart button(file:///Users/tonniekhaleque/Documents/Target/src/test/java/features/searchaproduct.feature:9)
+</pre></div></td>
+<td>21</td>
+<td>TestRunner@12405818</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify user can create new account using valid information", "Optional[Create Account]"</td>
+<td></td>
+<td>16</td>
+<td>TestRunner@12405818</td></tr>
+<tr>
+<td title='TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify user can create new account using invalid information", "Optional[Create Account]"</td>
+<td></td>
+<td>12</td>
+<td>TestRunner@12405818</td></tr>
+<tr>
+<td title='TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify user sign in using valid email and valid password", "Optional[Login]"</td>
+<td></td>
+<td>13</td>
+<td>TestRunner@12405818</td></tr>
+<tr>
+<td title='TestRunner.runScenario()'><b>runScenario</b><br>Test class: TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "verify user sign in using invalid email or phone number and valid password", "Optional[Login]"</td>
+<td></td>
+<td>10</td>
 <td>TestRunner@12405818</td></tr>
 </table><p>
 </body>

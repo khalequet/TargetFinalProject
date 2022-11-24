@@ -1,4 +1,4 @@
-Feature: Create Account
+Feature: Link
   @link
   Scenario: count and verify footer's service section links
 

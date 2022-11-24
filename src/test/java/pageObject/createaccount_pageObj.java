@@ -39,7 +39,7 @@ public class createaccount_pageObj extends Config {
     @FindBy (how = How.NAME, using = "passwordcreateaccount")
     public WebElement createPasswordLocator;
 
-    @FindBy (how = How.XPATH, using = "//button[@class='BaseButton-sc-j0jbcc-0 ButtonPrimary-sc-1qgspc1-0 styles__ButtonWithMargin-sc-1ltb4ye-4 iISjbi fphwbC lbdwpj']")
+    @FindBy (how = How.XPATH, using = "//*[@id='createAccount']/span")
     public WebElement createAccounttosignupLocator;
 
     @FindBy(how =How.XPATH, using = "//div[@data-test='authAlertDisplay']/div")
@@ -83,29 +83,6 @@ public class createaccount_pageObj extends Config {
     }
 
 
-
-
-    /// Hardcode
-//    public void enteremailAddress(){
-//        emailAddressLocator.sendKeys("tkhaleque1234@gmail.com");
-//    }
-//
-//    public void enterfirstname(){
-//        firstNameLocator.sendKeys("Tuma");
-//    }
-//
-//    public void enterlastname(){
-//        lastNameLocator.sendKeys("Ahmed");
-//    }
-//
-//    public void enterphonenumber(){
-//        phoneNumberLocator.sendKeys("9293309592");
-//    }
-//    public void enterpassword(){
-//        createPasswordLocator.sendKeys("Candy12!");
-//    }
-//
-//
     public void clickaccountbuttontosignup(){
         createAccounttosignupLocator.click();
     }
@@ -125,8 +102,5 @@ public class createaccount_pageObj extends Config {
         Assert.assertEquals(exp, act);
 
     }
-
-
-
 
 }

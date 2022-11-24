@@ -2,12 +2,14 @@ package stepDef;
 
 import base.Config;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
 import pageObject.searchaproduct_pageObj;
 
 public class searchaproduct_stepDef extends Config {
 
     searchaproduct_pageObj SP = new searchaproduct_pageObj(driver);
-    @And("i enter Gift Cards on the search box")
+
+    @And("i enter bedside lamp on the search box")
     public void iEnterGiftCardsOnTheSearchBox() {
         SP.clickonsearchbox();
     }
@@ -17,24 +19,49 @@ public class searchaproduct_stepDef extends Config {
         SP.clickonsearchboxIcon();
     }
 
-    @And("i click on specialty gift cards")
-    public void iClickOnSpecialtyGiftCards() {
-        SP.clickonSpecialtyGiftCards();
+    @And("i click on Accent table lamps")
+    public void iClickOnAccentTableLamps() {
+    SP.iclickonAccenttablelamp();
+    }
+
+    @And("i click on Accent table lamp picture")
+    public void iClickOnAddToCartForAccentTableLamp() throws InterruptedException {
+        SP.iclickonADDTOCARTFORAccenttablelamp();
+    }
+
+    @And("i click on Add to cart button")
+    public void iClickOnAddToCartButton() {
+        SP.iclickonADDToCartAccenttablelamp();
+    }
+
+    @And("i click on Shop This Store Popup")
+    public void iClickOnShopThisStorePopup() {
+        SP.iclickonpopup();
     }
 
 
-    @And("i click on Starbucks gift card link")
-    public void iClickOnStarbucksGiftCardFromTheExploreItemsPopup() throws InterruptedException {
-        SP.clickonStarbucksGiftCards();
+    @And("i click on Second Add to cart button")
+    public void iClickOnSecondAddToCartButton() {
+        SP.iclickSecondAddtocart();
     }
 
-    @And("i click on value ${int}")
-    public void iClickOnValue$(int arg0) {
-        SP.clickonvalue();
+    @And("i click on SignIn button from product cart page")
+    public void iClickOnSignInButtonFromProductCartPage() {
+        SP.iclickSignInbutton();
     }
 
-    @And("i click on Add to Cart")
-    public void iClickOnAddToCart() {
-        SP.clickonAddTOCart();
+    @And("i enter valid email")
+    public void iEnterValidEmail() {
+        SP.ientereamil();
+    }
+
+    @And("i enter valid password")
+    public void iEnterValidPassword() {
+        SP.ienterpassword();
+    }
+
+    @And("i click on Signin Submit button")
+    public void iClickOnSigninSubmitButton() {
+        SP.clickonSigninSubmit();
     }
 }

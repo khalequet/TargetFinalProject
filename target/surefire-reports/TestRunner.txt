@@ -1,15 +1,29 @@
 -------------------------------------------------------------------------------
 Test set: TestRunner
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 25.529 s <<< FAILURE! - in TestRunner
-TestRunner.runScenario["verify user can search a product and add the product to the cart", "Optional[Create Account]"](1)  Time elapsed: 24.449 s  <<< FAILURE!
-org.openqa.selenium.JavascriptException: 
-javascript error: Cannot read properties of undefined (reading 'click')
+Tests run: 6, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 116.521 s <<< FAILURE! - in TestRunner
+TestRunner.runScenario["count and verify footer's service section links", "Optional[Link]"](3)  Time elapsed: 42.316 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='footer']/div/div"}
   (Session info: chrome=107.0.5304.110)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
 Build info: version: '4.1.1', revision: 'e8fcc2cecf'
 System info: host: 'Tonnies-MBP', ip: 'fe80:0:0:0:1822:80ec:98e6:21ca%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.5.1', java.version: '19'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a2254db773ee7199ea8165cd635ff7d3, executeScript {script=arguments[0].click(), args=[]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.110, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: /var/folders/21/_1db5crd4ys...}, goog:chromeOptions: {debuggerAddress: localhost:62895}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:62895/devtoo..., se:cdpVersion: 107.0.5304.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: a2254db773ee7199ea8165cd635ff7d3
+Command: [08e6753bde12f5f80dcd3943549f9c35, findElement {using=xpath, value=//div[@id='footer']/div/div}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.110, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: /var/folders/21/_1db5crd4ys...}, goog:chromeOptions: {debuggerAddress: localhost:62954}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:62954/devtoo..., se:cdpVersion: 107.0.5304.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 08e6753bde12f5f80dcd3943549f9c35
+
+TestRunner.runScenario["verify user can search a product and add the product to the cart", "Optional[Search a Product]"](6)  Time elapsed: 21.294 s  <<< FAILURE!
+org.openqa.selenium.StaleElementReferenceException: 
+stale element reference: element is not attached to the page document
+  (Session info: chrome=107.0.5304.110)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: '4.1.1', revision: 'e8fcc2cecf'
+System info: host: 'Tonnies-MBP', ip: 'fe80:0:0:0:1822:80ec:98e6:21ca%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '12.5.1', java.version: '19'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [f440dc1143f59516243e6fc5b0bc34d9, clickElement {id=d5a8e9d1-930a-4ce6-9493-d30b00e07bb7}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 107.0.5304.110, chrome: {chromedriverVersion: 107.0.5304.62 (1eec40d3a576..., userDataDir: /var/folders/21/_1db5crd4ys...}, goog:chromeOptions: {debuggerAddress: localhost:63494}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:cdp: ws://localhost:63494/devtoo..., se:cdpVersion: 107.0.5304.110, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on MAC (f440dc1143f59516243e6fc5b0bc34d9)] -> xpath: //*[@id='addToCartButtonOrTextIdFor83223533']]
+Session ID: f440dc1143f59516243e6fc5b0bc34d9
 

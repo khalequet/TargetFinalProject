@@ -2,16 +2,13 @@ package pageObject;
 
 import base.Config;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
+
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
-
-import java.util.List;
+import org.testng.Assert;
 
 
 public class searchaproduct_pageObj extends Config {
@@ -30,78 +27,78 @@ public class searchaproduct_pageObj extends Config {
     @FindBy(how = How.XPATH, using = "//button[@data-test='@web/Search/SearchButton']")
     public WebElement searchboxIconLocator;
 
-    @FindBy(how = How.LINK_TEXT, using = "Specialty Gift Cards")
-    public WebElement SpecialtyGiftCardsLocator;
+    @FindBy(how =How.LINK_TEXT,using = "Accent table lamps")
+    public WebElement AccenttablelampLocator;
 
+    @FindBy(how=How.XPATH,using = "//*[@id='pageBodyContainer']/div[1]/div/div[4]/div/div[1]/div[2]/div/section/div/div[1]/div/div/div[1]/div[1]/h3/div/div/a/div[1]/picture/img")
+    public WebElement AccenttablelamppicyureTLocator;
 
-    @FindBy(how = How.ID, using = "addToCartButtonOrTextIdFor52804129")
-    public WebElement StarbucksGiftCardsLocator;
-
-    @FindBy(how = How.LINK_TEXT, using = "$50")
-    public WebElement valueLocator;
-
-    @FindBy(how = How.XPATH, using = "//button[@class='BaseButton-sc-j0jbcc-0 ButtonPrimary-sc-1qgspc1-0 fdaZTm eitQue']")
+    @FindBy(how=How.XPATH,using = "//*[@id='addToCartButtonOrTextIdFor83223533']")
     public WebElement AddtoCartLocator;
+
+    @FindBy(how=How.XPATH,using = "//button[@aria-label='close']")
+    public WebElement ShopThisStoreLocator;
+    @FindBy(how=How.XPATH,using = "//button[@aria-label='Add to cart for Fluted Ceramic Mini Table Lamp Dark Gray - Threshold™']")
+    public WebElement SecondAddtoCartLocator;
+    @FindBy(how =How.XPATH,using = "//button[@data-test='delivery-address-picker-sign-in-button']")
+    public WebElement SIgnInbuttonLocator;
+
+    @FindBy(how = How.XPATH,using = "//*[@id='username']")
+    public WebElement EmailLocator;
+    @FindBy(how = How.XPATH,using = "//*[@id='password']")
+    public WebElement passLocator;
+    @FindBy(how = How.XPATH,using = "//*[@type='submit']")
+    public WebElement SIgnInSubmitLocator;
+
 
 
     //Function
 
+
     public void clickonsearchbox() {
-        searchboxLocator.sendKeys("Gift Cards");
+        searchboxLocator.sendKeys("bedside lamp");
     }
 
     public void clickonsearchboxIcon() {
         searchboxIconLocator.click();
     }
 
-    public void clickonSpecialtyGiftCards() {
-        SpecialtyGiftCardsLocator.click();
+    public void iclickonAccenttablelamp(){
+        AccenttablelampLocator.click();
     }
 
-    public void clickonStarbucksGiftCards()  {
-
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-
-       // js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
-
-       js.executeScript("window.scrollBy(0, 100)");
-
-        WebElement star = driver.findElement(By.xpath("//*[@id='addToCartButtonOrTextIdFor52804129']"));
-        js.executeScript("arguments[0].click()");
-
+    public void iclickonADDTOCARTFORAccenttablelamp() throws InterruptedException {
+        Thread.sleep(3000);
+        AccenttablelamppicyureTLocator.click();
     }
-
-
-    public void clickonvalue() {
-        valueLocator.click();
-    }
-    public void clickonAddTOCart() {
+    public void iclickonADDToCartAccenttablelamp(){
         AddtoCartLocator.click();
     }
+    public void iclickonpopup(){
+        ShopThisStoreLocator.click();
+    }
+
+    public void iclickSecondAddtocart(){
+        SecondAddtoCartLocator.click();
+    }
+    public void iclickSignInbutton(){
+        SIgnInbuttonLocator.click();
+    }
+
+    public void ientereamil(){
+        EmailLocator.sendKeys("tomaarni12@gmail.com");
+    }
+
+    public void ienterpassword(){
+        passLocator.sendKeys("Candy123!");
+    }
+
+    public void clickonSigninSubmit(){
+        SIgnInSubmitLocator.click();
+    }
 
 
 
-
-// js.executeScript("window.scrollBy(0,5700)");
-
-//        Actions actions = new Actions(driver);
-//        WebElement star = driver.findElement(By.xpath("//*[@id='addToCartButtonOrTextIdFor52804129']"));
-//        actions.moveToElement(star).build().perform();
+    }
 
 
-   JavascriptExecutor js = (JavascriptExecutor) driver;
-//    WebElement star = driver.findElement(By.xpath("//button[@aria-label='Add Starbucks Gift Card $25 (Email Delivery) to cart']"));
-//        js.executeScript("arguments[0].scrollIntoView()",star);
- //     js.executeScript("window.scrollBy(0,5700)");
-////        Thread.sleep(3000);
-////        StarbucksGiftCardsLocator.click();
-//                js.executeScript("arguments[0].click()");
-
-
-
-//        WebElement moon = driver.findElement(By.xpath("//*[@id='addToCartButtonOrTextIdFor52804129']"));
-//        new Actions(driver)
-//                .moveToElement(moon)
-//                .perform();
-
-}
