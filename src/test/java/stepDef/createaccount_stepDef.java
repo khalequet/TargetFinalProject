@@ -65,44 +65,6 @@ public class createaccount_stepDef extends Config {
 
     }
 
-
-
-    //Hardcode
-//
-//    @And("i enter valid email address")
-//    public void iEnterValidEmailAddress() {
-//        CP.enteremailAddress();
-//
-//    }
-//
-//    @And("i enter first name")
-//    public void iEnterFirstName() {
-//
-//        CP.enterfirstname();
-//
-//    }
-//
-//    @And("i enter last name")
-//    public void iEnterLastName() {
-//
-//        CP.enterlastname();
-//
-//    }
-//
-//    @And("i enter phone number")
-//    public void iEnterPhoneNumber() {
-//
-//     CP.enterphonenumber();
-//    }
-//
-//    @And("i enter create password")
-//    public void iEnterCreatePassword() {
-//
-//        CP.enterpassword();
-//
-//    }
-
-
     @When("i click on the create account button")
     public void iClickOnTheCreateAccountButton() {
         CP.clickaccountbuttontosignup();

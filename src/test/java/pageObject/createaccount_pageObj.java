@@ -83,31 +83,6 @@ public class createaccount_pageObj extends Config {
     }
 
 
-//
-//    //Hardcode
-//
-//    public void enteremailAddress(){
-//        emailAddressLocator.sendKeys("tonniekhaleque@gmail.com");
-//    }
-//
-//    public void enterfirstname(){
-//        firstNameLocator.sendKeys("Tina");
-//    }
-//
-//    public void enterlastname(){
-//        lastNameLocator.sendKeys("Ahmed");
-//    }
-//
-//    public void enterphonenumber(){
-//        phoneNumberLocator.sendKeys("3476980782");
-//    }
-//    public void enterpassword(){
-//        createPasswordLocator.sendKeys("Password1234!");
-//    }
-//
-//    // end of hardcode
-
-
     public void clickaccountbuttontosignup(){
         createAccounttosignupLocator.click();
     }
