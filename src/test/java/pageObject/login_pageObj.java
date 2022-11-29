@@ -61,7 +61,7 @@ public class login_pageObj extends Config {
     }
 
     public void enteremailorphonenumber(){
-        emailorphonelocator.sendKeys("tkhaleque1234@gmail.com");
+        emailorphonelocator.sendKeys("tonniekhaleque@gmail.com");
 
     }
 
@@ -70,7 +70,7 @@ public class login_pageObj extends Config {
 
     }
     public void enterpasswordforSignIn(){
-       passwordforSignInlocator.sendKeys("Candy12!");
+       passwordforSignInlocator.sendKeys("Password1234!");
 
     }
 

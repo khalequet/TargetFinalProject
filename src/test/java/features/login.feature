@@ -5,7 +5,7 @@ Feature: Login
     And i click on sign in button to navigate to sign in page
 
 
-@login1
+@login11
   Scenario: verify user sign in using valid email and valid password
 
     And i enter or phone number to sign in to Target

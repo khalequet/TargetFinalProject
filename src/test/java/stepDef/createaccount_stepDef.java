@@ -32,10 +32,10 @@ public class createaccount_stepDef extends Config {
     public void iEnterValidEmailAddress() {
         String firstname = faker.name().firstName().toLowerCase();
         String lastname = faker.name().lastName().toLowerCase();
+        String fakeRandomNumber = faker.number().digits(6);
         String domain = "@gmail.com";
-        String email = firstname+lastname+domain;
+        String email = firstname+lastname+fakeRandomNumber+domain;
         CP.enteremailAddress(email);
-
     }
 
     @And("i enter first name")
@@ -101,8 +101,8 @@ public class createaccount_stepDef extends Config {
 //        CP.enterpassword();
 //
 //    }
-//
-//
+
+
     @When("i click on the create account button")
     public void iClickOnTheCreateAccountButton() {
         CP.clickaccountbuttontosignup();
